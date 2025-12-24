@@ -72,7 +72,7 @@ export default function ExperiencePage() {
           }}>
             {'>'} EXPERIENCE.LOG
           </h2>
-          <p className="text-terminalGray text-sm animate-flicker">
+          <p className="text-terminalGray text-lg animate-flicker font-medium">
             $ Loading career history... [COMPLETE]
           </p>
         </div>
@@ -108,12 +108,12 @@ export default function ExperiencePage() {
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2 flex-wrap">
                       <h3 
-                        className="font-bold text-xl transition-all duration-300 group-hover:text-2xl"
+                        className="font-bold text-2xl transition-all duration-300 group-hover:text-3xl"
                         style={{ color: exp.color }}
                       >
                         {exp.role}
                       </h3>
-                      <span className="px-3 py-1 rounded text-xs font-bold" style={{ 
+                      <span className="px-3 py-1 rounded text-sm font-bold" style={{ 
                         backgroundColor: `${exp.color}20`,
                         color: exp.color,
                         border: `1px solid ${exp.color}`,
@@ -121,17 +121,17 @@ export default function ExperiencePage() {
                         {exp.duration}
                       </span>
                     </div>
-                    <div className="flex items-center gap-4 mb-3 text-sm">
+                    <div className="flex items-center gap-4 mb-3 text-base font-medium">
                       <div className="flex items-center gap-2 text-terminalGray">
-                        <Briefcase size={16} />
+                        <Briefcase size={18} />
                         <span>{exp.company}</span>
                       </div>
                       <div className="flex items-center gap-2 text-terminalGray">
-                        <MapPin size={16} />
+                        <MapPin size={18} />
                         <span>{exp.location}</span>
                       </div>
                     </div>
-                    <p className="text-terminalGray text-sm leading-relaxed group-hover:text-terminalGreen transition-colors">
+                    <p className="text-terminalGray text-base leading-relaxed group-hover:text-terminalGreen transition-colors font-normal">
                       {exp.description}
                     </p>
                   </div>
@@ -143,12 +143,12 @@ export default function ExperiencePage() {
                     style={{ borderColor: exp.color }}
                   >
                     <div className="flex items-center gap-2 mb-3">
-                      <Activity size={18} style={{ color: exp.color }} />
-                      <h4 className="font-bold" style={{ color: exp.color }}>KEY ACHIEVEMENTS:</h4>
+                      <Activity size={20} style={{ color: exp.color }} />
+                      <h4 className="font-bold text-lg" style={{ color: exp.color }}>KEY ACHIEVEMENTS:</h4>
                     </div>
                     <ul className="space-y-2">
                       {exp.achievements.map((achievement, achIdx) => (
-                        <li key={achIdx} className="flex items-start gap-2 text-terminalGray text-sm">
+                        <li key={achIdx} className="flex items-start gap-2 text-terminalGray text-base font-medium">
                           <span style={{ color: exp.color }}>{'>>'}</span>
                           <span>{achievement}</span>
                         </li>
@@ -171,7 +171,7 @@ export default function ExperiencePage() {
             <Calendar size={20} style={{ color: '#00ff00' }} />
             <span className="font-bold" style={{ color: '#00ff00' }}>CAREER TIMELINE:</span>
           </div>
-          <div className="text-terminalGray text-sm">
+          <div className="text-terminalGray text-base">
             <p>{'$'} Currently building expertise in DevOps and Cloud Engineering</p>
             <p>{'$'} Seeking opportunities to contribute to scalable infrastructure systems</p>
           </div>

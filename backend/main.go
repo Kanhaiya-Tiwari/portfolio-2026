@@ -8,9 +8,15 @@ import (
 	"your_project/backend/routes"
 
 	"github.com/gorilla/mux"
+	"github.com/joho/godotenv"
 )
 
 func main() {
+	// Load environment variables from .env file
+	if err := godotenv.Load(); err != nil {
+		log.Fatalf("Error loading .env file: %v", err)
+	}
+	
 	db.InitDB()
 	r := mux.NewRouter()
 	routes.RegisterContactRoutes(r)

@@ -13,7 +13,7 @@ export default function ContactPage() {
     { icon: Phone, label: 'Phone', value: '7489960276', href: 'tel:7489960276', color: '#00bfff' },
     { icon: Linkedin, label: 'LinkedIn', value: 'Connect on LinkedIn', href: 'https://linkedin.com', color: '#ff5555' },
     { icon: Github, label: 'GitHub', value: 'View on GitHub', href: 'https://github.com', color: '#ffff00' },
-    { icon: FileText, label: 'Resume', value: 'Download Resume', href: '#', color: '#ff00ff' },
+    { icon: FileText, label: 'Resume', value: 'Download Resume', href: '/Kanhaiya_Tiwari DevOps CV.pdf', color: '#ff00ff', download: true },
     { icon: MapPin, label: 'Location', value: 'Jabalpur, India', href: '#', color: '#00ffff' },
   ];
 
@@ -27,7 +27,7 @@ export default function ContactPage() {
           }}>
             {'>'} CONTACT.INFO
           </h2>
-          <p className="text-terminalGray text-sm animate-flicker">
+          <p className="text-terminalGray text-lg animate-flicker font-medium">
             $ Establishing secure connection...
           </p>
         </div>
@@ -60,12 +60,12 @@ export default function ContactPage() {
                       border: `2px solid ${contact.color}`,
                     }}
                   >
-                    <Icon size={28} style={{ color: contact.color }} />
+                    <Icon size={32} style={{ color: contact.color }} />
                   </div>
                   <div className="flex-1">
-                    <div className="text-xs text-terminalGray mb-1">{contact.label}</div>
+                    <div className="text-sm text-terminalGray mb-1 font-medium">{contact.label}</div>
                     <div 
-                      className="font-bold transition-all duration-300 group-hover:text-lg"
+                      className="font-bold text-lg transition-all duration-300 group-hover:text-xl"
                       style={{ color: contact.color }}
                     >
                       {contact.value}

@@ -33,31 +33,31 @@ export default function ContactForm() {
 
   return (
     <div>
-      <span className="text-terminalGreen">Send a Message:</span><br/>
+      <span className="text-terminalGreen text-lg font-bold">Send a Message:</span><br/>
       <form onSubmit={handleSubmit}>
-        <span className="text-terminalGray">Name:</span> <input
+        <span className="text-terminalGray text-base font-medium">Name:</span> <input
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
           className="bg-black text-terminalBlue border border-terminalGray"
         /><br/>
-        <span className="text-terminalGray">Email:</span> <input
+        <span className="text-terminalGray text-base font-medium">Email:</span> <input
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
           className="bg-black text-terminalBlue border border-terminalGray"
         /><br/>
-        <span className="text-terminalGray">Message:</span> <textarea
+        <span className="text-terminalGray text-base font-medium">Message:</span> <textarea
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           required
           className="bg-black text-terminalBlue border border-terminalGray"
         /><br/>
-        <button type="submit" className="text-terminalGreen">Send</button>
+        <button type="submit" className="text-terminalGreen px-4 py-2 rounded-lg border border-terminalGreen hover:bg-terminalGreen hover:text-black transition-colors duration-300 font-bold mt-4">Send</button>
       </form>
-      {status && <div className="text-terminalYellow">{status}</div>}
+      {status && <div className="text-terminalYellow text-base mt-2 font-medium">{status}</div>}
     </div>
   );
 }

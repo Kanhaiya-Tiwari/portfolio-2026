@@ -113,7 +113,7 @@ export default function SkillsPage() {
           }}>
             {'>'} SKILLS MATRIX
           </h2>
-          <p className="text-terminalGray text-sm animate-flicker">
+          <p className="text-terminalGray text-lg animate-flicker font-medium">
             $ Loading skill database... [COMPLETE]
           </p>
         </div>
@@ -149,26 +149,26 @@ export default function SkillsPage() {
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="text-2xl">{skill.symbol}</span>
+                      <span className="text-3xl">{skill.symbol}</span>
                       <h3 
-                        className="font-bold text-lg transition-all duration-300 group-hover:text-xl"
+                        className="font-bold text-xl transition-all duration-300 group-hover:text-2xl"
                         style={{ color: skill.color }}
                       >
                         {skill.name}
                       </h3>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="flex-1 h-2 bg-gray-800 rounded-full overflow-hidden">
+                      <div className="flex-1 h-3 bg-gray-800 rounded-full overflow-hidden">
                         <div 
                           className="h-full transition-all duration-500 rounded-full"
                           style={{ 
                             width: `${skill.level}%`,
                             backgroundColor: skill.color,
-                            boxShadow: `0 0 10px ${skill.color}`,
+                            boxShadow: `0 0 12px ${skill.color}`,
                           }}
                         ></div>
                       </div>
-                      <span className="text-sm font-bold" style={{ color: skill.color }}>
+                      <span className="text-base font-bold" style={{ color: skill.color }}>
                         {skill.level}%
                       </span>
                     </div>
@@ -180,7 +180,7 @@ export default function SkillsPage() {
                     className="mt-3 pt-3 border-t-2 animate-slideIn"
                     style={{ borderColor: skill.color }}
                   >
-                    <p className="text-terminalGray text-sm">{skill.description}</p>
+                    <p className="text-terminalGray text-base font-normal">{skill.description}</p>
                   </div>
                 )}
 
@@ -198,9 +198,9 @@ export default function SkillsPage() {
             <Terminal size={20} style={{ color: '#00ff00' }} />
             <span className="font-bold" style={{ color: '#00ff00' }}>SYSTEM STATUS:</span>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-base">
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: '#00ff00' }}></div>
+              <div className="w-2.5 h-2.5 rounded-full animate-pulse" style={{ backgroundColor: '#00ff00' }}></div>
               <span className="text-terminalGray">Core Skills: ACTIVE</span>
             </div>
             <div className="flex items-center gap-2">

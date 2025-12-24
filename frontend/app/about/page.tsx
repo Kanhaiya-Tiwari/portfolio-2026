@@ -44,7 +44,7 @@ export default function About() {
           }}>
             {'>'} ABOUT.TXT
           </h2>
-          <p className="text-terminalGray text-sm animate-flicker">
+          <p className="text-terminalGray text-lg animate-flicker font-medium">
             $ Loading profile data... [COMPLETE]
           </p>
         </div>
@@ -79,15 +79,15 @@ export default function About() {
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="text-xs opacity-50" style={{ color: section.color }}>{'$'}</span>
+                      <span className="text-sm opacity-50 font-bold" style={{ color: section.color }}>{'$'}</span>
                       <h3 
-                        className="font-bold text-lg transition-all duration-300 group-hover:text-xl"
+                        className="font-bold text-xl transition-all duration-300 group-hover:text-2xl"
                         style={{ color: section.color }}
                       >
                         {section.title}
                       </h3>
                     </div>
-                    <p className="text-terminalGray text-sm leading-relaxed group-hover:text-terminalGreen transition-colors">
+                    <p className="text-terminalGray text-base leading-relaxed group-hover:text-terminalGreen transition-colors font-normal">
                       {section.content}
                     </p>
                   </div>
@@ -125,8 +125,8 @@ export default function About() {
                   e.currentTarget.style.boxShadow = `0 0 10px ${info.color}40`;
                 }}
               >
-                <Icon size={24} style={{ color: info.color }} className="mx-auto mb-2" />
-                <p className="text-xs" style={{ color: info.color }}>{info.label}</p>
+                <Icon size={32} style={{ color: info.color }} className="mx-auto mb-2" />
+                <p className="text-sm font-bold" style={{ color: info.color }}>{info.label}</p>
               </div>
             );
           })}

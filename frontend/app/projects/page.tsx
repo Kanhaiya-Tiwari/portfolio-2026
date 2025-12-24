@@ -80,7 +80,7 @@ export default function ProjectsPage() {
           }}>
             {'>'} PROJECTS.REPO
           </h2>
-          <p className="text-terminalGray text-sm animate-flicker">
+          <p className="text-terminalGray text-lg animate-flicker font-medium">
             $ Scanning repository... [FOUND {projects.length} PROJECTS]
           </p>
         </div>
@@ -112,18 +112,18 @@ export default function ProjectsPage() {
                         border: `2px solid ${project.color}`,
                       }}
                     >
-                      <Icon size={28} style={{ color: project.color }} />
+                      <Icon size={32} style={{ color: project.color }} />
                     </div>
                     <div>
                       <h3 
-                        className="font-bold text-lg transition-all duration-300 group-hover:text-xl mb-1"
+                        className="font-bold text-xl transition-all duration-300 group-hover:text-2xl mb-1"
                         style={{ color: project.color }}
                       >
                         {project.name}
                       </h3>
                       <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: project.color }}></div>
-                        <span className="text-xs font-bold" style={{ color: project.color }}>
+                        <div className="w-2.5 h-2.5 rounded-full animate-pulse" style={{ backgroundColor: project.color }}></div>
+                        <span className="text-sm font-bold" style={{ color: project.color }}>
                           {project.status}
                         </span>
                       </div>
@@ -132,7 +132,7 @@ export default function ProjectsPage() {
                   <FolderOpen size={20} style={{ color: project.color }} className="opacity-50" />
                 </div>
 
-                <p className="text-terminalGray text-sm mb-4 group-hover:text-terminalGreen transition-colors">
+                <p className="text-terminalGray text-base mb-4 group-hover:text-terminalGreen transition-colors font-medium">
                   {project.description}
                 </p>
 
@@ -140,7 +140,7 @@ export default function ProjectsPage() {
                   {project.tech.map((tech, techIdx) => (
                     <span
                       key={techIdx}
-                      className="px-3 py-1 rounded text-xs font-bold transition-all duration-300 hover:scale-110"
+                      className="px-3 py-1 rounded text-sm font-bold transition-all duration-300 hover:scale-110"
                       style={{
                         backgroundColor: `${project.color}20`,
                         color: project.color,
@@ -166,7 +166,7 @@ export default function ProjectsPage() {
                       e.currentTarget.style.textShadow = 'none';
                     }}
                   >
-                    <Github size={16} />
+                    <Github size={18} />
                     <span>View Code</span>
                   </a>
                   {project.demo && (
@@ -183,13 +183,13 @@ export default function ProjectsPage() {
                         e.currentTarget.style.textShadow = 'none';
                       }}
                     >
-                      <ExternalLink size={16} />
+                      <ExternalLink size={18} />
                       <span>Live Demo</span>
                     </a>
                   )}
                 </div>
 
-                <div className="absolute top-2 right-2 text-xs opacity-50 animate-flicker" style={{ color: project.color }}>
+                <div className="absolute top-2 right-2 text-sm opacity-50 animate-flicker font-bold" style={{ color: project.color }}>
                   {'>'}
                 </div>
                 <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full" style={{ color: project.color }}></div>

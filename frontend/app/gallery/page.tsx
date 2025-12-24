@@ -60,9 +60,9 @@ export default function GalleryPage() {
                 color: '#00ff00',
                 textShadow: '0 0 10px #00ff00, 0 0 20px #00ff00',
               }}>
-                {'>'} IMAGE GALLERY
+                {'>'} MEDIA GALLERY
               </h2>
-              <p className="text-terminalGray text-sm animate-flicker">
+              <p className="text-terminalGray text-lg animate-flicker font-medium">
                 $ Loading gallery images... [COMPLETE]
               </p>
             </div>
@@ -77,7 +77,7 @@ export default function GalleryPage() {
               }`}
               style={{ color: selectedCategory === 'all' ? '#00ff00' : '#888888' }}
             >
-              <ImageIcon size={18} />
+              <ImageIcon size={20} />
               All ({allImages.length})
             </button>
             <button
@@ -87,7 +87,7 @@ export default function GalleryPage() {
               }`}
               style={{ color: selectedCategory === 'certificates' ? '#00ff00' : '#888888' }}
             >
-              <Award size={18} />
+              <Award size={20} />
               Certificates ({certificates.length})
             </button>
             <button
@@ -97,7 +97,7 @@ export default function GalleryPage() {
               }`}
               style={{ color: selectedCategory === 'internship' ? '#00ff00' : '#888888' }}
             >
-              <Briefcase size={18} />
+              <Briefcase size={20} />
               Internship ({internshipCertificates.length})
             </button>
             <button
@@ -107,7 +107,7 @@ export default function GalleryPage() {
               }`}
               style={{ color: selectedCategory === 'academic' ? '#00ff00' : '#888888' }}
             >
-              <GraduationCap size={18} />
+              <GraduationCap size={20} />
               Academic ({academicResults.length})
             </button>
           </div>
@@ -116,7 +116,7 @@ export default function GalleryPage() {
           <div className="flex gap-2 mb-6">
             <button
               onClick={() => setViewMode(2)}
-              className={`px-4 py-2 rounded-lg border-2 transition-all duration-300 ${
+              className={`px-4 py-2 rounded-lg border-2 transition-all duration-300 font-bold ${
                 viewMode === 2 ? 'border-terminalGreen bg-terminalGreen/20' : 'border-terminalGray'
               }`}
               style={{ color: viewMode === 2 ? '#00ff00' : '#888888' }}
@@ -125,7 +125,7 @@ export default function GalleryPage() {
             </button>
             <button
               onClick={() => setViewMode(3)}
-              className={`px-4 py-2 rounded-lg border-2 transition-all duration-300 ${
+              className={`px-4 py-2 rounded-lg border-2 transition-all duration-300 font-bold ${
                 viewMode === 3 ? 'border-terminalGreen bg-terminalGreen/20' : 'border-terminalGray'
               }`}
               style={{ color: viewMode === 3 ? '#00ff00' : '#888888' }}
@@ -134,7 +134,7 @@ export default function GalleryPage() {
             </button>
             <button
               onClick={() => setViewMode(4)}
-              className={`px-4 py-2 rounded-lg border-2 transition-all duration-300 ${
+              className={`px-4 py-2 rounded-lg border-2 transition-all duration-300 font-bold ${
                 viewMode === 4 ? 'border-terminalGreen bg-terminalGreen/20' : 'border-terminalGray'
               }`}
               style={{ color: viewMode === 4 ? '#00ff00' : '#888888' }}
@@ -147,7 +147,7 @@ export default function GalleryPage() {
         <ImageGallery images={getCurrentImages()} columns={viewMode} />
 
         <div className="mt-8 p-4 rounded-lg border-2" style={{ borderColor: '#00bfff', backgroundColor: 'rgba(0, 191, 255, 0.05)' }}>
-          <p className="text-terminalGray text-sm">
+          <p className="text-terminalGray text-base font-normal">
             <span className="text-terminalGreen font-bold">{'$'}</span> Tip: Images ko click karke fullscreen mode me dekh sakte hain. 
             Arrow keys se navigate kar sakte hain.
           </p>

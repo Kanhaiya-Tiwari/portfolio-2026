@@ -5,8 +5,10 @@
 
 body {
   background: radial-gradient(circle at center, #0a0a0a, #000000);
-  color: #00ff00;
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: #e0e0e0; /* Default text color, more visible */
+  font-family: var(--font-roboto-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 1.125rem; /* base font size larger */
+  line-height: 1.75;   /* better readability */
   position: relative;
   overflow-x: hidden;
 }

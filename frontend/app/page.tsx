@@ -98,7 +98,7 @@ export default function Home() {
           }}>
             [DevOps Engineer]
           </h2>
-          <p className="text-terminalGray mb-6 text-lg animate-flicker">
+          <p className="text-terminalGray mb-6 text-xl font-medium animate-flicker">
             $ Passionate about automation, cloud technologies, and building scalable infrastructure
           </p>
         </div>
@@ -122,20 +122,20 @@ export default function Home() {
                 onMouseLeave={() => setHoveredCard(null)}
                 onClick={() => {}}
               >
-                <div className="absolute top-1 right-1 text-xs opacity-50" style={{ color: card.color }}>
+                <div className="absolute top-1 right-1 text-sm opacity-50 font-bold" style={{ color: card.color }}>
                   {'>'}
                 </div>
-                <Icon 
-                  className="mb-3 transition-all duration-300 group-hover:scale-125 group-hover:rotate-12" 
-                  size={40} 
-                  style={{ color: card.color }}
-                />
-                <span 
-                  className="font-bold transition-all duration-300 group-hover:text-xl"
-                  style={{ color: card.color }}
-                >
-                  {card.label}
-                </span>
+                  <Icon 
+                    className="mb-3 transition-all duration-300 group-hover:scale-125 group-hover:rotate-12" 
+                    size={48} 
+                    style={{ color: card.color }}
+                  />
+                  <span 
+                    className="font-bold text-lg transition-all duration-300 group-hover:text-2xl"
+                    style={{ color: card.color }}
+                  >
+                    {card.label}
+                  </span>
                 <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full" style={{ color: card.color }}></div>
               </div>
             );
@@ -143,10 +143,10 @@ export default function Home() {
         </div>
 
         <div className="mb-8 animate-fadeIn">
-          <p className="text-terminalGray text-lg mb-4">
+          <p className="text-terminalGray text-xl mb-4 font-medium">
             $ Welcome to my terminal-themed portfolio.
           </p>
-          <p className="text-terminalBlue text-sm animate-flicker">
+          <p className="text-terminalBlue text-lg animate-flicker font-medium">
             {'>'} Navigate using the commands above or explore my journey in DevOps and cloud engineering.
           </p>
         </div>
@@ -177,8 +177,8 @@ export default function Home() {
                 }}
                 title={social.label}
               >
-                <Icon size={28} style={{ color: social.color }} className="group-hover:animate-spin" />
-                <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: social.color }}>
+                <Icon size={32} style={{ color: social.color }} className="group-hover:animate-spin" />
+                <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm opacity-0 group-hover:opacity-100 transition-opacity font-medium" style={{ color: social.color }}>
                   {social.label}
                 </span>
               </a>

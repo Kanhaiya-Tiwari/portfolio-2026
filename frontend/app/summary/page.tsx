@@ -35,7 +35,7 @@ export default function SummaryPage() {
           }}>
             {'>'} SUMMARY.TXT
           </h2>
-          <p className="text-terminalGray text-sm animate-flicker">
+          <p className="text-terminalGray text-lg animate-flicker font-medium">
             $ Loading professional summary... [COMPLETE]
           </p>
         </div>
@@ -65,9 +65,9 @@ export default function SummaryPage() {
                       border: `2px solid ${highlight.color}`,
                     }}
                   >
-                    <Icon size={24} style={{ color: highlight.color }} />
+                    <Icon size={28} style={{ color: highlight.color }} />
                   </div>
-                  <p className="text-terminalGray text-sm leading-relaxed group-hover:text-terminalGreen transition-colors flex-1">
+                  <p className="text-terminalGray text-base leading-relaxed group-hover:text-terminalGreen transition-colors flex-1 font-normal">
                     {highlight.text}
                   </p>
                 </div>
@@ -82,7 +82,7 @@ export default function SummaryPage() {
 
         <div className="mb-8">
           <h3 className="text-xl font-bold mb-4 flex items-center gap-2" style={{ color: '#00bfff' }}>
-            <Server size={24} />
+            <Server size={28} />
             {'>'} KEY COMPETENCIES
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -102,8 +102,8 @@ export default function SummaryPage() {
                   e.currentTarget.style.boxShadow = '0 0 10px rgba(0, 255, 0, 0.2)';
                 }}
               >
-                <CheckCircle size={18} style={{ color: '#00ff00' }} />
-                <span className="text-terminalGray text-sm">{skill}</span>
+                <CheckCircle size={20} style={{ color: '#00ff00' }} />
+                <span className="text-terminalGray text-base font-medium">{skill}</span>
               </div>
             ))}
           </div>
@@ -111,10 +111,10 @@ export default function SummaryPage() {
 
         <div className="p-4 rounded-lg border-2" style={{ borderColor: '#00ff00', backgroundColor: 'rgba(0, 255, 0, 0.05)' }}>
           <div className="flex items-center gap-2 mb-2">
-            <Target size={20} style={{ color: '#00ff00' }} />
-            <span className="font-bold" style={{ color: '#00ff00' }}>CAREER OBJECTIVE:</span>
+            <Target size={24} style={{ color: '#00ff00' }} />
+            <span className="font-bold text-lg" style={{ color: '#00ff00' }}>CAREER OBJECTIVE:</span>
           </div>
-          <p className="text-terminalGray text-sm">
+          <p className="text-terminalGray text-base font-normal">
             Seeking opportunities to contribute to scalable infrastructure systems as a DevOps or Cloud Engineer, 
             where I can apply my skills in automation, containerization, and cloud technologies while continuously 
             learning and growing in a dynamic environment.
