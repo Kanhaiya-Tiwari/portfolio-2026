@@ -97,7 +97,7 @@ export default function HackerPage() {
                     color: '#00ff00',
                     textShadow: '0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00',
                   }}>
-                    {'>'} HACKER TERMINAL
+                    {'>'} KANHA SUCURITY TERMINAL
                   </h1>
                   <p className="text-terminalGray text-sm animate-flicker">
                     $ Advanced Security & Network Analysis System

@@ -3,6 +3,7 @@
 import OutputBlock from '../components/OutputBlock';
 import { Code, Cloud, Server, Zap, Github, Linkedin, Mail, Terminal, Shield, Cpu, Database } from 'lucide-react';
 import { useState } from 'react';
+import Image from 'next/image';
 
 // Terminal Home page
 export default function Home() {
@@ -23,6 +24,67 @@ export default function Home() {
     <OutputBlock>
       <div className="text-center">
         <div className="mb-8 animate-slideIn">
+          {/* Profile Photo - Add your photo to /public/images/profile/photo.jpg */}
+          <div className="flex justify-center mb-6">
+            <div className="relative group">
+              {/* Left side glow effect */}
+              <div className="absolute -left-4 top-0 bottom-0 w-2 rounded-l-lg animate-pulseGlow" style={{
+                background: 'linear-gradient(to right, #00ff00, #00bfff, #ff00ff)',
+                opacity: 0.8,
+                boxShadow: '0 0 20px #00ff00, 0 0 40px #00bfff',
+                filter: 'blur(4px)',
+                zIndex: 12,
+              }}></div>
+              
+              {/* Right side glow effect */}
+              <div className="absolute -right-4 top-0 bottom-0 w-2 rounded-r-lg animate-pulseGlow" style={{
+                background: 'linear-gradient(to left, #00ff00, #00bfff, #ff00ff)',
+                opacity: 0.8,
+                boxShadow: '0 0 20px #00ff00, 0 0 40px #00bfff',
+                filter: 'blur(4px)',
+                zIndex: 12,
+                animationDelay: '0.5s',
+              }}></div>
+              
+              {/* Profile photo container */}
+              <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-lg overflow-hidden cursor-pointer clickable group-hover:scale-105 transition-all duration-300" style={{
+                boxShadow: '0 0 30px rgba(0, 255, 0, 0.3), 0 0 60px rgba(0, 191, 255, 0.2)',
+                zIndex: 10,
+              }}>
+                <Image
+                  src="/images/profile/photo.jpeg"
+                  alt="Kanhaiya Tiwari - DevOps Engineer"
+                  fill
+                  priority
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  style={{
+                    objectPosition: 'center 25%',
+                    objectFit: 'cover',
+                  }}
+                  sizes="(max-width: 768px) 192px, 224px"
+                  onError={(e) => {
+                    // If image doesn't exist, show placeholder
+                    const target = e.currentTarget as HTMLImageElement;
+                    target.style.display = 'none';
+                    const parent = target.parentElement;
+                    if (parent) {
+                      parent.innerHTML = '<div class="w-full h-full flex items-center justify-center bg-gray-800 text-terminalGreen text-4xl font-bold">KT</div>';
+                    }
+                  }}
+                />
+                
+                {/* Top and bottom border effects on hover */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-terminalGreen to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{
+                  background: 'linear-gradient(to right, transparent, #00ff00, #00bfff, #00ff00, transparent)',
+                  boxShadow: '0 0 10px #00ff00',
+                }}></div>
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-terminalGreen to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{
+                  background: 'linear-gradient(to right, transparent, #00ff00, #00bfff, #00ff00, transparent)',
+                  boxShadow: '0 0 10px #00ff00',
+                }}></div>
+              </div>
+            </div>
+          </div>
           <h1 className="text-5xl font-bold mb-3 animate-glow" style={{ 
             color: '#00ff00',
             textShadow: '0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00',

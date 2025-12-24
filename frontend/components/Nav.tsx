@@ -13,6 +13,7 @@ export default function Nav() {
     { href: '/experience', label: 'experience', color: '#ff5555' },
     { href: '/projects', label: 'projects', color: '#ffff00' },
     { href: '/skills', label: 'skills', color: '#ff00ff' },
+    { href: '/gallery', label: 'gallery', color: '#ff0080' },
     { href: '/hacker', label: 'hacker', color: '#00ffff' },
     { href: '/summary', label: 'summary', color: '#ff8800' },
     { href: '/contact', label: 'contact', color: '#00ff41' },

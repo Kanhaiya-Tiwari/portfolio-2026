@@ -9,17 +9,52 @@ const experiences = [
     company: 'Codenixia (Rostris Verse Pvt. Ltd.)', 
     role: 'Linux, Cloud & DevOps Engineer Intern', 
     location: 'Pune, India',
-    duration: 'Current',
-    description: 'Gaining real-world exposure to industry workflows. Trained in Linux server configuration, cloud computing, virtualization, monitoring, automation, and DevOps pipelines. Contributing to integrated intelligent cloud-based application involving Docker containers, Python programming, CI/CD pipelines, monitoring frameworks, and distributed systems.',
+    duration: 'Current (6 months)',
+    description: 'Selected for a six-month Linux, Cloud, and DevOps industrial internship at Codenixia. Focusing on Linux administration, Docker, CI/CD, cloud computing, automation, monitoring, and real-time project-based DevOps workflows. Gaining real-world exposure to industry workflows and contributing to integrated intelligent cloud-based applications.',
     achievements: [
       'Linux server configuration and management',
+      'Docker containerization and orchestration',
+      'CI/CD pipeline development and automation',
       'Cloud infrastructure setup and optimization',
-      'CI/CD pipeline development',
-      'Container orchestration with Docker',
-      'Monitoring and observability implementation'
+      'Monitoring and observability implementation',
+      'Real-time project-based DevOps workflows'
     ],
     color: '#00ff00',
-    icon: Briefcase
+    icon: Server
+  },
+  { 
+    company: 'TechnoHacks Solutions', 
+    role: 'DevOps Intern', 
+    location: 'Remote/Online',
+    duration: '1 month',
+    description: 'Completed a one-month DevOps internship at TechnoHacks Solutions, gaining hands-on experience with Linux, Git, Docker, CI/CD pipelines, deployment automation, and foundational cloud practices in real-world environments.',
+    achievements: [
+      'Linux system administration and configuration',
+      'Version control with Git and GitHub',
+      'Docker containerization and management',
+      'CI/CD pipeline setup and automation',
+      'Deployment automation practices',
+      'Foundational cloud computing concepts'
+    ],
+    color: '#00bfff',
+    icon: Cloud
+  },
+  { 
+    company: 'Excelerate × Saint Louis University', 
+    role: 'Flutter Development Intern', 
+    location: 'Virtual/Remote',
+    duration: 'Virtual Internship',
+    description: 'Participated in a Flutter mobile app development virtual internship program. Learned cross-platform UI design, application workflows, version control practices, and gained exposure to DevOps-oriented development-to-deployment concepts.',
+    achievements: [
+      'Cross-platform mobile app development with Flutter',
+      'UI/UX design and implementation',
+      'Application workflow development',
+      'Version control and Git practices',
+      'DevOps-oriented development-to-deployment pipeline',
+      'Mobile app deployment concepts'
+    ],
+    color: '#ff5555',
+    icon: Code
   },
 ];
 

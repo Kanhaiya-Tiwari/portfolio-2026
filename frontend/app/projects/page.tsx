@@ -6,44 +6,64 @@ import { useState } from 'react';
 
 const projects = [
   {
-    name: 'Cloud Infrastructure Automation',
-    description: 'Automated cloud infrastructure provisioning using Terraform and Ansible for scalable deployments.',
-    tech: ['Terraform', 'Ansible', 'AWS', 'Docker'],
-    icon: Cloud,
+    name: 'Portfolio 2026',
+    description: 'Modern terminal-themed portfolio website built with Next.js, React, and TypeScript. Features hacker-style animations, interactive components, and a full-stack architecture with Go backend.',
+    tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Go', 'PostgreSQL'],
+    icon: Code,
+    color: '#00ff00',
+    status: 'LIVE',
+    github: 'https://github.com/Kanhaiya-Tiwari/portfolio-2026.git',
+    demo: null
+  },
+  {
+    name: 'Docker Fullstack Application',
+    description: 'Full-stack application containerized with Docker, demonstrating microservices architecture, container orchestration, and DevOps best practices.',
+    tech: ['Docker', 'Docker Compose', 'Microservices', 'CI/CD'],
+    icon: Database,
     color: '#00bfff',
-    status: 'ACTIVE'
+    status: 'ACTIVE',
+    github: 'https://github.com/Kanhaiya-Tiwari/docker_fullstack.git',
+    demo: null
   },
   {
-    name: 'CI/CD Pipeline System',
-    description: 'Complete CI/CD pipeline implementation with Jenkins and GitHub Actions for automated testing and deployment.',
-    tech: ['Jenkins', 'GitHub Actions', 'Docker', 'Kubernetes'],
-    icon: Zap,
-    color: '#ffff00',
-    status: 'DEPLOYED'
-  },
-  {
-    name: 'Kubernetes Cluster Management',
-    description: 'Managed Kubernetes clusters with monitoring, logging, and auto-scaling capabilities.',
-    tech: ['Kubernetes', 'Grafana', 'Prometheus', 'Helm'],
+    name: 'Sharda Boys Hostel Management System',
+    description: 'Complete hostel management system for Sharda Boys Hostel. Includes room booking, complaint management, admin dashboard, and student portal. Built with PHP and MySQL.',
+    tech: ['PHP', 'MySQL', 'JavaScript', 'CSS', 'HTML'],
     icon: Server,
     color: '#ff5555',
-    status: 'PRODUCTION'
+    status: 'DEPLOYED',
+    github: 'https://github.com/Kanhaiya-Tiwari/7th-semester-project.git',
+    demo: null
   },
   {
-    name: 'Container Orchestration Platform',
-    description: 'Docker-based containerization platform with automated build and deployment workflows.',
-    tech: ['Docker', 'Docker Compose', 'Linux', 'Bash'],
-    icon: Database,
-    color: '#00ff00',
-    status: 'ACTIVE'
+    name: 'Flask Web Application',
+    description: 'Web application built with Python Flask framework. Demonstrates RESTful API design, database integration, and modern web development practices.',
+    tech: ['Python', 'Flask', 'REST API', 'HTML', 'CSS'],
+    icon: Cloud,
+    color: '#ffff00',
+    status: 'ACTIVE',
+    github: 'https://github.com/Kanhaiya-Tiwari/Flask.git',
+    demo: null
   },
   {
-    name: 'Infrastructure Monitoring Dashboard',
-    description: 'Real-time monitoring dashboard for infrastructure metrics and system health.',
-    tech: ['Grafana', 'Prometheus', 'Python', 'Linux'],
-    icon: Code,
+    name: 'Flask with MongoDB',
+    description: 'Full-stack application using Flask backend with MongoDB database. Features NoSQL data management, API endpoints, and dynamic web interface.',
+    tech: ['Python', 'Flask', 'MongoDB', 'NoSQL', 'API'],
+    icon: Zap,
     color: '#ff00ff',
-    status: 'DEPLOYED'
+    status: 'ACTIVE',
+    github: 'https://github.com/Kanhaiya-Tiwari/Flask_with-_mangoDB.git',
+    demo: null
+  },
+  {
+    name: 'Hostel Management System (Alternative)',
+    description: 'Alternative implementation of hostel management system with enhanced features for student accommodation, room allocation, and administrative controls.',
+    tech: ['PHP', 'MySQL', 'JavaScript', 'Web Development'],
+    icon: Server,
+    color: '#00ffff',
+    status: 'COMPLETED',
+    github: 'https://github.com/Kanhaiya-Tiwari/Sharda_Boys_hostel.git',
+    demo: null
   },
 ];
 
@@ -134,8 +154,10 @@ export default function ProjectsPage() {
 
                 <div className="flex items-center gap-4">
                   <a
-                    href="#"
-                    className="flex items-center gap-2 text-sm transition-all duration-300 hover:scale-110"
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm transition-all duration-300 hover:scale-110 clickable"
                     style={{ color: project.color }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.textShadow = `0 0 10px ${project.color}`;
@@ -147,20 +169,24 @@ export default function ProjectsPage() {
                     <Github size={16} />
                     <span>View Code</span>
                   </a>
-                  <a
-                    href="#"
-                    className="flex items-center gap-2 text-sm transition-all duration-300 hover:scale-110"
-                    style={{ color: project.color }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.textShadow = `0 0 10px ${project.color}`;
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.textShadow = 'none';
-                    }}
-                  >
-                    <ExternalLink size={16} />
-                    <span>Live Demo</span>
-                  </a>
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-sm transition-all duration-300 hover:scale-110 clickable"
+                      style={{ color: project.color }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.textShadow = `0 0 10px ${project.color}`;
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.textShadow = 'none';
+                      }}
+                    >
+                      <ExternalLink size={16} />
+                      <span>Live Demo</span>
+                    </a>
+                  )}
                 </div>
 
                 <div className="absolute top-2 right-2 text-xs opacity-50 animate-flicker" style={{ color: project.color }}>

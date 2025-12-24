@@ -10,13 +10,7 @@
   "Ansible Automation",
   "CI/CD with Jenkins & GitHub Actions",
   "Grafana & Monitoring",
-  "Prompt Engineering"
-]
-[
-  "Linux & System Administration",
-  "Bash & Python Scripting",
-  "Git & GitHub",
-  "Jenkins & GitHub Actions",
+  "Prompt Engineering",
   "AWS Cloud Services",
   "Kubernetes Orchestration",
   "Terraform (IaC)",
