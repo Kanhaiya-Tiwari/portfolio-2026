@@ -5,6 +5,11 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write    # allow pushing to branches
+  pages: write       # required for deploying to GitHub Pages
+  id-token: write
+
 jobs:
   build-and-deploy:
     name: Build & Deploy Frontend
@@ -14,6 +19,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           submodules: recursive
 
       - name: Set up Go
