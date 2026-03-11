@@ -103,7 +103,6 @@ Build the frontend for production locally:
 ```bash
 cd frontend
 npm run build
-npm run export
 npm start
 ```
 
