@@ -1,10 +1,11 @@
 /** @type {import('next').NextConfig} */
 
-// GitHub Pages serves at https://<user>.github.io/<repo>/
-// basePath and assetPrefix must match your repo name exactly
-const repoName = process.env.GITHUB_REPOSITORY?.replace(/^[^/]+\//, '') || 'portfolio-2026-knhapndt';
-const basePath = `/${repoName}`;
-const assetPrefix = `${basePath}/`; // trailing slash required for CSS/JS assets
+// Custom domain (info.buildwithkanha.shop) = serve from root, no basePath
+// GitHub.io subpath = use /<repo-name> as basePath
+const useCustomDomain = process.env.USE_CUSTOM_DOMAIN === 'true';
+const repoName = process.env.GITHUB_REPOSITORY?.replace(/^[^/]+\//, '') || 'portfolio-2026';
+const basePath = useCustomDomain ? '' : `/${repoName}`;
+const assetPrefix = useCustomDomain ? '' : `${basePath}/`;
 
 const nextConfig = {
   output: 'export',

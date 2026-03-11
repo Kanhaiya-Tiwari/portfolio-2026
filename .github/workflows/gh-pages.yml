@@ -48,6 +48,7 @@ jobs:
         working-directory: frontend
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
+          USE_CUSTOM_DOMAIN: 'true'
         run: |
           npm run build
 
@@ -57,6 +58,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./frontend/out
           publish_branch: gh-pages
+          cname: info.buildwithkanha.shop
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com
           allow_empty_commit: true
