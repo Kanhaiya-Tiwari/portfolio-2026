@@ -88,11 +88,22 @@ The portfolio uses multiple hacker-themed colors:
 
 ## 🚀 Deployment
 
-Build the frontend for production:
+### GitHub Pages
+
+This repository includes a GitHub Actions workflow that builds the Next.js frontend as a static site and publishes it to the `gh-pages` branch. The site will be available at `https://<your‑username>.github.io/<your-repo>` once you enable GitHub Pages in the repository settings. Steps:
+
+1. Push your code to the `main` branch (the workflow also compiles the Go backend to catch any errors).
+2. Go to **Settings > Pages** in your GitHub repository.
+3. Choose the `gh-pages` branch as the source and save.
+
+The workflow (`.github/workflows/gh-pages.yml`) runs automatically on every push to `main`.
+
+Build the frontend for production locally:
 
 ```bash
 cd frontend
 npm run build
+npm run export
 npm start
 ```
 
