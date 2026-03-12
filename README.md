@@ -35,7 +35,6 @@ A modern, interactive portfolio website with a hacker/terminal aesthetic, built 
 
 ### Frontend Setup
 
-```bash
 cd frontend
 npm install
 npm run dev
