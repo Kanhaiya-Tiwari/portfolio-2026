@@ -153,8 +153,8 @@ export default function Home() {
 
         <div className="flex justify-center space-x-6">
           {[
-            { icon: Github, href: 'https://github.com', color: '#00ff00', label: 'GitHub' },
-            { icon: Linkedin, href: 'https://linkedin.com', color: '#00bfff', label: 'LinkedIn' },
+            { icon: Github, href: 'https://github.com/Kanhaiya-Tiwari', color: '#00ff00', label: 'GitHub' },
+            { icon: Linkedin, href: 'https://www.linkedin.com/in/kanhaiya-tiwari-46685422a', color: '#00bfff', label: 'LinkedIn' },
             { icon: Mail, href: 'mailto:kt230088@gmail.com', color: '#ff5555', label: 'Email' },
           ].map((social, idx) => {
             const Icon = social.icon;

@@ -11,8 +11,8 @@ export default function ContactPage() {
   const contacts = [
     { icon: Mail, label: 'Email', value: 'kt230088@gmail.com', href: 'mailto:kt230088@gmail.com', color: '#00ff00' },
     { icon: Phone, label: 'Phone', value: '7489960276', href: 'tel:7489960276', color: '#00bfff' },
-    { icon: Linkedin, label: 'LinkedIn', value: 'Connect on LinkedIn', href: 'https://linkedin.com', color: '#ff5555' },
-    { icon: Github, label: 'GitHub', value: 'View on GitHub', href: 'https://github.com', color: '#ffff00' },
+    { icon: Linkedin, label: 'LinkedIn', value: 'Connect on LinkedIn', href: 'https://www.linkedin.com/in/kanhaiya-tiwari-46685422a', color: '#ff5555' },
+    { icon: Github, label: 'GitHub', value: 'View on GitHub', href: 'https://github.com/Kanhaiya-Tiwari', color: '#ffff00' },
     { icon: FileText, label: 'Resume', value: 'Download Resume', href: '/Kanhaiya_Tiwari DevOps CV.pdf', color: '#ff00ff', download: true },
     { icon: MapPin, label: 'Location', value: 'Jabalpur, India', href: '#', color: '#00ffff' },
   ];

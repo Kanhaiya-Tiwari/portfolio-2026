@@ -114,6 +114,7 @@ ISC
 **Kanhaiya Tiwari**
 - Email: kt230088@gmail.com
 - GitHub: [@Kanhaiya-Tiwari](https://github.com/Kanhaiya-Tiwari)
+- LinkedIn: [Kanhaiya Tiwari](https://www.linkedin.com/in/kanhaiya-tiwari-46685422a)
 
 ---
 

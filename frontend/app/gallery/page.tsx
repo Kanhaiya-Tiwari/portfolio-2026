@@ -2,8 +2,46 @@
 
 import OutputBlock from '../../components/OutputBlock';
 import ImageGallery from '../../components/ImageGallery';
-import { Image as ImageIcon, Award, Briefcase, GraduationCap } from 'lucide-react';
+import { Image as ImageIcon, Award, Briefcase, GraduationCap, ExternalLink } from 'lucide-react';
 import { useState } from 'react';
+
+const certifications = [
+  {
+    title: 'Amazon Web Services Solutions Architect - Associate',
+    issuer: 'Udemy',
+    issued: 'Dec 2025',
+    link: 'https://ude.my/UC-4d5e52bc-5ab4-4165-9b3d-164b53f583d0',
+    color: '#ff8800',
+  },
+  {
+    title: 'DevOps',
+    issuer: 'Tutedude',
+    issued: 'Dec 2025',
+    link: null,
+    color: '#00bfff',
+  },
+  {
+    title: 'Python Essentials 1',
+    issuer: 'Cisco',
+    issued: 'Aug 2025',
+    link: 'https://credly.com/badges/a3026eab-10d3-4b9b-84c3-06269298290f/linked_in_profile',
+    color: '#00ff00',
+  },
+  {
+    title: 'Deloitte Australia - Cyber Job Simulation',
+    issuer: 'Forage',
+    issued: 'Jul 2025',
+    link: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_nuyXj8CjCLkHmEuhX_1752981202221_completion_certificate.pdf',
+    color: '#ff5555',
+  },
+  {
+    title: 'Red Hat Certified System Administrator (RHCSA)',
+    issuer: 'Red Hat',
+    issued: '',
+    link: null,
+    color: '#ff00ff',
+  },
+];
 
 // Certificates
 const certificates = [
@@ -141,6 +179,48 @@ export default function GalleryPage() {
             >
               4 Columns
             </button>
+          </div>
+        </div>
+
+        <div className="mb-8">
+          <h3 className="text-2xl font-bold mb-3" style={{ color: '#00bfff' }}>
+            {'>'} CERTIFICATIONS
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            {certifications.map((cert, idx) => (
+              <div
+                key={idx}
+                className="p-4 rounded-lg border-2 clickable transition-all duration-300 hover:scale-[1.01]"
+                style={{
+                  borderColor: cert.color,
+                  backgroundColor: 'rgba(0, 0, 0, 0.45)',
+                  boxShadow: `0 0 10px ${cert.color}40`,
+                }}
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <div className="text-sm font-bold" style={{ color: cert.color }}>
+                      {cert.issuer}{cert.issued ? ` • ${cert.issued}` : ''}
+                    </div>
+                    <div className="text-terminalGray text-base font-medium">
+                      {cert.title}
+                    </div>
+                  </div>
+                  {cert.link && (
+                    <a
+                      href={cert.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-sm font-bold clickable"
+                      style={{ color: cert.color }}
+                    >
+                      <ExternalLink size={16} />
+                      View
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 

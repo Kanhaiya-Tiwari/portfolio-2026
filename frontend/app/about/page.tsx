@@ -12,7 +12,7 @@ export default function About() {
       icon: User,
       title: 'IDENTITY',
       color: '#00ff00',
-      content: 'I am Kanhaiya Tiwari, a final-year B.Tech Computer Science Engineering student at AKS University, Satna, with a focused interest in DevOps and Cloud Engineering. I come from Jabalpur, India, and I am building my career around designing, automating, and managing reliable infrastructure systems.'
+      content: 'I am Kanhaiya Tiwari, learning DevOps by building, breaking, and fixing real systems. I’m a final-year B.Tech Computer Science Engineering student with a focused interest in DevOps and Cloud Engineering, based in Jabalpur, India.'
     },
     {
       icon: Code,

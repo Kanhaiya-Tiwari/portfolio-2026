@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { 
   Terminal, Home, User, Briefcase, FolderKanban, 
-  Code, Image, Shield, FileText, Mail, Sparkles 
+  Code, Image, FileText, Mail, Sparkles 
 } from 'lucide-react';
 import { useState } from 'react';
 
@@ -19,7 +19,6 @@ export default function Nav() {
     { href: '/projects', label: 'Projects', icon: FolderKanban, color: '#ffff00', description: 'My Projects' },
     { href: '/skills', label: 'Skills', icon: Code, color: '#ff00ff', description: 'Tech Skills' },
     { href: '/gallery', label: 'Gallery', icon: Image, color: '#ff0080', description: 'Certificates' },
-    { href: '/hacker', label: 'Hacker', icon: Shield, color: '#00ffff', description: 'Terminal' },
     { href: '/summary', label: 'Summary', icon: FileText, color: '#ff8800', description: 'Overview' },
     { href: '/contact', label: 'Contact', icon: Mail, color: '#00ff41', description: 'Get in Touch' },
   ];
@@ -67,7 +66,7 @@ export default function Nav() {
         </div>
 
         {/* Navigation Links Grid */}
-        <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-2">
+        <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-8 gap-2">
           {links.map((link) => {
             const isActive = pathname === link.href;
             const Icon = link.icon;

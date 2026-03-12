@@ -1,68 +1,78 @@
 'use client';
 
 import OutputBlock from '../../components/OutputBlock';
-import { FolderOpen, ExternalLink, Github, Code, Cloud, Server, Zap, Database } from 'lucide-react';
+import { FolderOpen, ExternalLink, Github, Code, Cloud, Server, Zap, Database, Shield } from 'lucide-react';
 import { useState } from 'react';
 
 const projects = [
   {
-    name: 'Portfolio 2026',
-    description: 'Modern terminal-themed portfolio website built with Next.js, React, and TypeScript. Features hacker-style animations, interactive components, and a full-stack architecture with Go backend.',
-    tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Go', 'PostgreSQL'],
+    name: 'Portfolio 2026 (Terminal Theme)',
+    description: 'Terminal/hacker-themed portfolio built with Next.js App Router + Tailwind. Deployed on GitHub Pages with custom domain and static export.',
+    tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'GitHub Actions', 'GitHub Pages'],
     icon: Code,
     color: '#00ff00',
     status: 'LIVE',
-    github: 'https://github.com/Kanhaiya-Tiwari/portfolio-2026.git',
-    demo: null
+    github: 'https://github.com/Kanhaiya-Tiwari/portfolio-2026',
+    demo: 'https://info.buildwithkanha.shop'
   },
   {
-    name: 'Docker Fullstack Application',
-    description: 'Full-stack application containerized with Docker, demonstrating microservices architecture, container orchestration, and DevOps best practices.',
-    tech: ['Docker', 'Docker Compose', 'Microservices', 'CI/CD'],
+    name: 'Docker Fullstack',
+    description: 'Full-stack app containerized with Docker. Focus on reproducible local dev, networking, service separation, and production-style workflows.',
+    tech: ['Docker', 'Docker Compose', 'Linux', 'Networking'],
     icon: Database,
     color: '#00bfff',
     status: 'ACTIVE',
-    github: 'https://github.com/Kanhaiya-Tiwari/docker_fullstack.git',
+    github: 'https://github.com/Kanhaiya-Tiwari/docker_fullstack',
     demo: null
   },
   {
-    name: 'Sharda Boys Hostel Management System',
-    description: 'Complete hostel management system for Sharda Boys Hostel. Includes room booking, complaint management, admin dashboard, and student portal. Built with PHP and MySQL.',
-    tech: ['PHP', 'MySQL', 'JavaScript', 'CSS', 'HTML'],
-    icon: Server,
-    color: '#ff5555',
-    status: 'DEPLOYED',
-    github: 'https://github.com/Kanhaiya-Tiwari/7th-semester-project.git',
-    demo: null
-  },
-  {
-    name: 'Flask Web Application',
-    description: 'Web application built with Python Flask framework. Demonstrates RESTful API design, database integration, and modern web development practices.',
-    tech: ['Python', 'Flask', 'REST API', 'HTML', 'CSS'],
+    name: 'Terraform Exercises',
+    description: 'Hands-on Terraform practice repo covering core IaC concepts: providers, modules, state, variables, outputs, and reusable patterns.',
+    tech: ['Terraform', 'IaC', 'Cloud', 'HCL'],
     icon: Cloud,
-    color: '#ffff00',
-    status: 'ACTIVE',
-    github: 'https://github.com/Kanhaiya-Tiwari/Flask.git',
+    color: '#ff8800',
+    status: 'LEARNING',
+    github: 'https://github.com/Kanhaiya-Tiwari/Terraform-exercises',
     demo: null
   },
   {
-    name: 'Flask with MongoDB',
-    description: 'Full-stack application using Flask backend with MongoDB database. Features NoSQL data management, API endpoints, and dynamic web interface.',
-    tech: ['Python', 'Flask', 'MongoDB', 'NoSQL', 'API'],
+    name: 'Ansible Exercises',
+    description: 'Ansible practice repo focused on automation basics: inventory, playbooks, roles, templates, handlers, and idempotent runs.',
+    tech: ['Ansible', 'Automation', 'Linux', 'YAML'],
     icon: Zap,
     color: '#ff00ff',
-    status: 'ACTIVE',
-    github: 'https://github.com/Kanhaiya-Tiwari/Flask_with-_mangoDB.git',
+    status: 'LEARNING',
+    github: 'https://github.com/Kanhaiya-Tiwari/ansible_exercises',
     demo: null
   },
   {
-    name: 'Hostel Management System (Alternative)',
-    description: 'Alternative implementation of hostel management system with enhanced features for student accommodation, room allocation, and administrative controls.',
-    tech: ['PHP', 'MySQL', 'JavaScript', 'Web Development'],
+    name: 'Kubernetes Practice',
+    description: 'Kubernetes learning repo with manifests and notes. Focus on core objects, deployments, services, config/secrets, and debugging.',
+    tech: ['Kubernetes', 'Containers', 'YAML', 'Troubleshooting'],
     icon: Server,
+    color: '#ff5555',
+    status: 'LEARNING',
+    github: 'https://github.com/Kanhaiya-Tiwari/kubernetes-Practice',
+    demo: null
+  },
+  {
+    name: 'GitHub Actions Workflow Practice',
+    description: 'CI/CD practice workflows: triggers, jobs, caching, artifacts, and deployment patterns using GitHub Actions.',
+    tech: ['GitHub Actions', 'CI/CD', 'YAML', 'Automation'],
+    icon: Shield,
     color: '#00ffff',
-    status: 'COMPLETED',
-    github: 'https://github.com/Kanhaiya-Tiwari/Sharda_Boys_hostel.git',
+    status: 'ACTIVE',
+    github: 'https://github.com/Kanhaiya-Tiwari/Github-Action-workflow-Practice',
+    demo: null
+  },
+  {
+    name: 'Auto-Healing System (Docker Project)',
+    description: 'Automation project exploring health checks and restart strategies to keep services running reliably (auto-healing approach).',
+    tech: ['Docker', 'Python', 'Reliability', 'Monitoring'],
+    icon: Database,
+    color: '#ffff00',
+    status: 'ACTIVE',
+    github: 'https://github.com/Kanhaiya-Tiwari/auto-healing-system-docker-project',
     demo: null
   },
 ];
