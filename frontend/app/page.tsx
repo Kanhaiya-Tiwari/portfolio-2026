@@ -9,6 +9,17 @@ import Image from 'next/image';
 export default function Home() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   
+  const repoLinks: Record<string, string> = {
+    Coding: 'https://github.com/Kanhaiya-Tiwari/portfolio-2026',
+    Cloud: 'https://github.com/Kanhaiya-Tiwari/Terraform-exercises',
+    DevOps: 'https://github.com/Kanhaiya-Tiwari/docker_fullstack',
+    Automation: 'https://github.com/Kanhaiya-Tiwari/auto-healing-system-docker-project',
+    Linux: 'https://github.com/Kanhaiya-Tiwari/Linux-shell-project',
+    Security: 'https://github.com/Kanhaiya-Tiwari', // no dedicated security repo yet
+    Infrastructure: 'https://github.com/Kanhaiya-Tiwari/kubernetes-Practice',
+    Data: 'https://github.com/Kanhaiya-Tiwari/docker_fullstack',
+  };
+
   const cards = [
     { icon: Code, label: 'Coding', color: '#00ff00', delay: '0s' },
     { icon: Cloud, label: 'Cloud', color: '#00bfff', delay: '0.1s' },
@@ -19,6 +30,12 @@ export default function Home() {
     { icon: Cpu, label: 'Infrastructure', color: '#ff8800', delay: '0.6s' },
     { icon: Database, label: 'Data', color: '#00ff41', delay: '0.7s' },
   ];
+
+  const openRepo = (label: string) => {
+    const url = repoLinks[label];
+    if (!url) return;
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <OutputBlock>
@@ -120,7 +137,13 @@ export default function Home() {
                 }}
                 onMouseEnter={() => setHoveredCard(idx)}
                 onMouseLeave={() => setHoveredCard(null)}
-                onClick={() => {}}
+                onClick={() => openRepo(card.label)}
+                role="link"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') openRepo(card.label);
+                }}
+                title={`Open ${card.label} repository`}
               >
                 <div className="absolute top-1 right-1 text-sm opacity-50 font-bold" style={{ color: card.color }}>
                   {'>'}
