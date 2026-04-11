@@ -103,7 +103,7 @@ Build the frontend for production locally:
 cd frontend
 npm run build
 npm start
-```
+``
 
 ## 📝 License
 
