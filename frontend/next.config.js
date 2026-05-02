@@ -1,11 +1,12 @@
 /** @type {import('next').NextConfig} */
 
-// Custom domain (info.buildwithkanha.shop) = serve from root, no basePath
-// GitHub.io subpath = use /<repo-name> as basePath
+const isDev = process.env.NODE_ENV === 'development';
 const useCustomDomain = process.env.USE_CUSTOM_DOMAIN === 'true';
 const repoName = process.env.GITHUB_REPOSITORY?.replace(/^[^/]+\//, '') || 'portfolio-2026';
-const basePath = useCustomDomain ? '' : `/${repoName}`;
-const assetPrefix = useCustomDomain ? '' : `${basePath}/`;
+
+// Don't use basePath in local development to prevent 404s at root
+const basePath = isDev ? '' : (useCustomDomain ? '' : `/${repoName}`);
+const assetPrefix = isDev ? '' : (useCustomDomain ? '' : `${basePath}/`);
 
 const nextConfig = {
   output: 'export',
@@ -21,4 +22,3 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
-
